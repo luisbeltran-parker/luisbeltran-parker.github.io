@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV – Luis Beltrán Paredes Encinas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sidebar-bg: #16212e;
+    --sidebar-bg-2: #1c2b3a;
+    --sidebar-text: #cfd6de;
+    --sidebar-heading: #ffffff;
+    --accent: #4a8fc2;
+    --accent-soft: #6ba3cf;
+    --bg: #f6f7f9;
+    --text-dark: #1c2228;
+    --text-muted: #647082;
+    --card-bg: #ffffff;
+    --border: #e4e7eb;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .print-btn {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    padding: 11px;
+    font-weight: 600;
+    font-size: .9rem;
+    letter-spacing: .5px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+  }
+  .print-btn:hover { background: #2f628c; }
+
+  .container {
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+    background: linear-gradient(170deg, var(--sidebar-bg) 0%, var(--sidebar-bg-2) 100%);
+    color: var(--sidebar-text);
+    width: 300px;
+    flex-shrink: 0;
+    padding: 36px 26px;
+  }
+
+  .photo-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 18px;
+  }
+  .photo {
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 4px solid var(--accent);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    background: #2a3441;
+    display: block;
+  }
+
+  .name {
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+  .role {
+    text-align: center;
+    font-size: .82rem;
+    color: var(--accent-soft);
+    margin-bottom: 26px;
+    font-weight: 500;
+    line-height: 1.5;
+  }
+
+  .sidebar h3 {
+    color: #fff;
+    font-size: .7rem;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    padding-bottom: 7px;
+    margin: 26px 0 14px;
+  }
+
+  .contact-item {
+    font-size: .82rem;
+    margin-bottom: 9px;
+    word-break: break-word;
+    color: #cfd6de;
+    display: flex;
+    align-items: flex-start;
+    gap: 7px;
+    line-height: 1.4;
+  }
+  .contact-item span.icon { flex-shrink: 0; }
+
+  .skill { margin-bottom: 11px; }
+  .skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: .78rem;
+    margin-bottom: 4px;
+    color: #dfe5ec;
+  }
+  .skill-bar {
+    background: #2c3848;
+    border-radius: 6px;
+    height: 6px;
+    overflow: hidden;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+    border-radius: 6px;
+  }
+
+  .lang-item {
+    font-size: .82rem;
+    margin-bottom: 7px;
+    color: #dfe5ec;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .lang-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .info-list {
+    list-style: none;
+    font-size: .8rem;
+    color: #b8c2cd;
+  }
+  .info-list li {
+    margin-bottom: 6px;
+    padding-left: 14px;
+    position: relative;
+    line-height: 1.4;
+  }
+  .info-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* MAIN */
+  .main {
+    flex: 1;
+    padding: 40px 48px;
+    min-width: 0;
+  }
+
+  .main-header {
+    margin-bottom: 32px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--border);
+  }
+  .main-header h1 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--text-dark);
+    letter-spacing: -.3px;
+    margin-bottom: 4px;
+  }
+  .main-header p {
+    font-size: .92rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  .section { margin-bottom: 34px; }
+
+  .section-title {
+    font-size: .88rem;
+    text-transform: uppercase;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    color: var(--text-dark);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+  .section-title::before {
+    content: "";
+    width: 24px;
+    height: 3px;
+    background: var(--accent);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .profile-text {
+    font-size: .92rem;
+    line-height: 1.75;
+    color: #3a414b;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding-left: 24px;
+    border-left: 2px solid var(--border);
+  }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 26px;
+  }
+  .timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -31px;
+    top: 5px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid #f6f7f9;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .timeline-date {
+    font-size: .75rem;
+    color: var(--accent);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin-bottom: 2px;
+  }
+  .timeline-title {
+    font-size: .97rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+    line-height: 1.3;
+  }
+  .timeline-org {
+    font-size: .82rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    font-style: italic;
+  }
+  .timeline-desc {
+    font-size: .85rem;
+    color: #4a525c;
+    line-height: 1.65;
+    padding-left: 16px;
+  }
+  .timeline-desc li { margin-bottom: 3px; }
+
+  /* GRID CARDS */
+  .grid-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 6px;
+    padding: 14px 16px;
+    box-shadow: 0 1px 3px rgba(20,30,45,0.05);
+  }
+  .card-title {
+    font-weight: 700;
+    font-size: .88rem;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+    line-height: 1.35;
+  }
+  .card-org {
+    font-size: .8rem;
+    color: var(--accent);
+    margin-bottom: 3px;
+  }
+  .card-date {
+    font-size: .76rem;
+    color: var(--text-muted);
+  }
+
+  @media (max-width: 860px) {
+    .container { flex-direction: column; }
+    .sidebar { width: 100%; }
+    .grid-cards { grid-template-columns: 1fr; }
+    .main { padding: 26px 20px; }
+  }
+  @media print {
+    .print-btn { display: none; }
+    body { background: white; }
+  }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">⬇ Descargar / Imprimir CV en PDF</button>
+
+<div class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="photo-wrap">
+      <img class="photo"
+           src="foto.jpg"
+           alt="Luis Beltrán Paredes Encinas"
+           onerror="this.src='https://ui-avatars.com/api/?name=Luis+Beltran&background=4a8fc2&color=fff&size=148&bold=true&rounded=true'">
+    </div>
+
+    <h1 class="name">Luis Beltrán<br>Paredes Encinas</h1>
+    <div class="role">Estudiante de Ingeniería<br>Estadística e Informática</div>
+
+    <h3>Contacto</h3>
+    <div class="contact-item"><span class="icon">📞</span> 927 621 010</div>
+    <div class="contact-item"><span class="icon">✉️</span> paredesencinasluisbeltran@gmail.com</div>
+    <div class="contact-item"><span class="icon">🎓</span> Universidad Nacional del Altiplano – Puno</div>
+    <div class="contact-item"><span class="icon">📋</span> Código: 236189</div>
+
+    <h3>Habilidades</h3>
+    <div class="skill">
+      <div class="skill-label"><span>R</span><span>90%</span></div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>EViews</span><span>85%</span></div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>MS Office</span><span>85%</span></div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>Minitab</span><span>80%</span></div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>SPSS</span><span>75%</span></div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>Python</span><span>70%</span></div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-label"><span>C++</span><span>65%</span></div>
+      <div class="skill-bar"><div class="skill-bar-fill" style="width:65%"></div></div>
+    </div>
+
+    <h3>Idiomas</h3>
+    <div class="lang-item"><span class="lang-dot"></span>Español — Nativo</div>
+    <div class="lang-item"><span class="lang-dot"></span>Aimara — Nativo</div>
+    <div class="lang-item"><span class="lang-dot" style="background:#4a5a6a"></span>Inglés — Básico</div>
+
+    <h3>Info Adicional</h3>
+    <ul class="info-list">
+      <li>Disponibilidad inmediata</li>
+      <li>Estudiante de 6to semestre</li>
+      <li>Enfoque en análisis estadístico y series de tiempo</li>
+      <li>Interés en ciencia de datos y machine learning</li>
+    </ul>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <div class="main-header">
+      <h1>Luis Beltrán Paredes Encinas</h1>
+      <p>Estudiante de Ingeniería Estadística e Informática — FINESI, UNA Puno</p>
+    </div>
+
+    <section class="section">
+      <h2 class="section-title">Perfil Profesional</h2>
+      <p class="profile-text">
+        Estudiante del VI Semestre de Ingeniería Estadística e Informática en la Universidad
+        Nacional del Altiplano (FINESI – Puno), con formación sólida en modelos estadísticos,
+        análisis de regresión y series de tiempo. Experiencia práctica en modelado econométrico
+        utilizando R, EViews y Minitab, incluyendo el desarrollo de un proyecto de tesis con
+        modelos SARIMA aplicado a datos reales de criminalidad. Maneja herramientas de
+        programación como Python y C++ para análisis de datos y desarrollo de algoritmos.
+        Proactivo, analítico y con interés en la ciencia de datos, el aprendizaje automático y
+        la investigación aplicada a problemas sociales y económicos de la región.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Experiencia / Proyectos</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025 – 2026</div>
+          <div class="timeline-title">Tesis: Modelado SARIMA de la criminalidad en la región Puno</div>
+          <div class="timeline-org">Trabajo de investigación – FINESI, UNA Puno</div>
+          <ul class="timeline-desc">
+            <li>Modelado de series de tiempo mensuales (2020–2026) usando SARIMA(1,1,1)(1,1,1)₁₂.</li>
+            <li>Incorporación de variable de intervención (dummy COVID-19) en el modelo.</li>
+            <li>Elaboración de pronósticos y validación con metodología Box-Jenkins.</li>
+            <li>Documentación completa en R, con redacción de tesis de 7 capítulos.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2026</div>
+          <div class="timeline-title">Comparación de modelos ARCH/GARCH para series de criminalidad</div>
+          <div class="timeline-org">Proyecto de econometría – EViews</div>
+          <ul class="timeline-desc">
+            <li>Modelado de volatilidad con ARCH(1) y GARCH(1,1) sobre series de criminalidad.</li>
+            <li>Selección de modelos mediante criterios de información AIC y BIC.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <div class="timeline-title">Análisis de Regresión Lineal y No Lineal</div>
+          <div class="timeline-org">Curso de Regresión – FINESI</div>
+          <ul class="timeline-desc">
+            <li>Estimación por Mínimos Cuadrados Ordinarios (MCO), pruebas t y tablas ANOVA.</li>
+            <li>Construcción de intervalos de confianza y bandas de Working-Hotelling.</li>
+            <li>Elaboración de reportes técnicos en Excel y documentos en LaTeX.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <div class="timeline-title">Análisis de algoritmos de Clustering (K-Means, PCA)</div>
+          <div class="timeline-org">Curso de Aprendizaje No Supervisado – FINESI</div>
+          <ul class="timeline-desc">
+            <li>Implementación de notebooks en Python para clustering y análisis de silueta.</li>
+            <li>Reducción de dimensionalidad con PCA y evaluación de calidad de agrupamiento.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Formación Académica</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <p class="card-title">Ingeniería Estadística e Informática — VI Sem. (en curso)</p>
+          <p class="card-org">Universidad Nacional del Altiplano – FINESI, Puno</p>
+          <p class="card-date">2023 – Actualidad</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Cursos y Áreas de Formación</h2>
+      <div class="grid-cards">
+        <div class="card">
+          <p class="card-title">Modelos Lineales</p>
+          <p class="card-org">FINESI – UNA Puno</p>
+        </div>
+        <div class="card">
+          <p class="card-title">Regresión Lineal y No Lineal</p>
+          <p class="card-org">FINESI – UNA Puno</p>
+        </div>
+        <div class="card">
+          <p class="card-title">Arquitectura y Protocolos de Redes</p>
+          <p class="card-org">FINESI – UNA Puno</p>
+        </div>
+        <div class="card">
+          <p class="card-title">Aprendizaje No Supervisado</p>
+          <p class="card-org">FINESI – UNA Puno</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+</body>
+</html>
