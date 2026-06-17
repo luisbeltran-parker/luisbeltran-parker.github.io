@@ -3,494 +3,974 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV – Luis Beltrán Paredes Encinas</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<title>Luis Beltrán Paredes Encinas | Portafolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --sidebar-bg: #16212e;
-    --sidebar-bg-2: #1c2b3a;
-    --sidebar-text: #cfd6de;
-    --sidebar-heading: #ffffff;
-    --accent: #4a8fc2;
-    --accent-soft: #6ba3cf;
-    --bg: #f6f7f9;
-    --text-dark: #1c2228;
-    --text-muted: #647082;
-    --card-bg: #ffffff;
-    --border: #e4e7eb;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text-dark);
-    -webkit-font-smoothing: antialiased;
-  }
 
-  .print-btn {
-    display: block;
-    text-align: center;
-    background: var(--accent);
-    color: #fff;
-    text-decoration: none;
-    padding: 11px;
-    font-weight: 600;
-    font-size: .9rem;
-    letter-spacing: .5px;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-  }
-  .print-btn:hover { background: #2f628c; }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
 
-  .container {
-    display: flex;
-    min-height: 100vh;
-  }
+body{
 
-  /* SIDEBAR */
-  .sidebar {
-    background: linear-gradient(170deg, var(--sidebar-bg) 0%, var(--sidebar-bg-2) 100%);
-    color: var(--sidebar-text);
-    width: 300px;
-    flex-shrink: 0;
-    padding: 36px 26px;
-  }
+    font-family:'Poppins',sans-serif;
+    background:#050816;
+    color:white;
+    overflow-x:hidden;
 
-  .photo-wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 18px;
-  }
-  .photo {
-    width: 148px;
-    height: 148px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    border: 4px solid var(--accent);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
-    background: #2a3441;
-    display: block;
-  }
+}
 
-  .name {
-    color: #fff;
-    font-size: 1.3rem;
-    text-align: center;
-    font-weight: 700;
-    line-height: 1.3;
-    margin-bottom: 6px;
-  }
-  .role {
-    text-align: center;
-    font-size: .82rem;
-    color: var(--accent-soft);
-    margin-bottom: 26px;
-    font-weight: 500;
-    line-height: 1.5;
-  }
+body::before{
 
-  .sidebar h3 {
-    color: #fff;
-    font-size: .7rem;
-    text-transform: uppercase;
-    letter-spacing: 1.8px;
-    font-weight: 700;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-    padding-bottom: 7px;
-    margin: 26px 0 14px;
-  }
+content:"";
 
-  .contact-item {
-    font-size: .82rem;
-    margin-bottom: 9px;
-    word-break: break-word;
-    color: #cfd6de;
-    display: flex;
-    align-items: flex-start;
-    gap: 7px;
-    line-height: 1.4;
-  }
-  .contact-item span.icon { flex-shrink: 0; }
+position:fixed;
 
-  .skill { margin-bottom: 11px; }
-  .skill-label {
-    display: flex;
-    justify-content: space-between;
-    font-size: .78rem;
-    margin-bottom: 4px;
-    color: #dfe5ec;
-  }
-  .skill-bar {
-    background: #2c3848;
-    border-radius: 6px;
-    height: 6px;
-    overflow: hidden;
-  }
-  .skill-bar-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--accent-soft));
-    border-radius: 6px;
-  }
+top:-300px;
+left:-300px;
 
-  .lang-item {
-    font-size: .82rem;
-    margin-bottom: 7px;
-    color: #dfe5ec;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .lang-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-    flex-shrink: 0;
-  }
+width:700px;
+height:700px;
 
-  .info-list {
-    list-style: none;
-    font-size: .8rem;
-    color: #b8c2cd;
-  }
-  .info-list li {
-    margin-bottom: 6px;
-    padding-left: 14px;
-    position: relative;
-    line-height: 1.4;
-  }
-  .info-list li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-  }
+background:#2563eb33;
 
-  /* MAIN */
-  .main {
-    flex: 1;
-    padding: 40px 48px;
-    min-width: 0;
-  }
+filter:blur(160px);
 
-  .main-header {
-    margin-bottom: 32px;
-    padding-bottom: 18px;
-    border-bottom: 2px solid var(--border);
-  }
-  .main-header h1 {
-    font-size: 1.7rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    letter-spacing: -.3px;
-    margin-bottom: 4px;
-  }
-  .main-header p {
-    font-size: .92rem;
-    color: var(--text-muted);
-    font-weight: 500;
-  }
+border-radius:50%;
 
-  .section { margin-bottom: 34px; }
+z-index:-2;
 
-  .section-title {
-    font-size: .88rem;
-    text-transform: uppercase;
-    letter-spacing: 1.6px;
-    font-weight: 700;
-    color: var(--text-dark);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 18px;
-  }
-  .section-title::before {
-    content: "";
-    width: 24px;
-    height: 3px;
-    background: var(--accent);
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
+}
 
-  .profile-text {
-    font-size: .92rem;
-    line-height: 1.75;
-    color: #3a414b;
-  }
+body::after{
 
-  /* TIMELINE */
-  .timeline {
-    padding-left: 24px;
-    border-left: 2px solid var(--border);
-  }
-  .timeline-item {
-    position: relative;
-    margin-bottom: 26px;
-  }
-  .timeline-item::before {
-    content: "";
-    position: absolute;
-    left: -31px;
-    top: 5px;
-    width: 11px;
-    height: 11px;
-    border-radius: 50%;
-    background: var(--accent);
-    border: 3px solid #f6f7f9;
-    box-shadow: 0 0 0 2px var(--accent);
-  }
-  .timeline-date {
-    font-size: .75rem;
-    color: var(--accent);
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    margin-bottom: 2px;
-  }
-  .timeline-title {
-    font-size: .97rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 2px;
-    line-height: 1.3;
-  }
-  .timeline-org {
-    font-size: .82rem;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-    font-style: italic;
-  }
-  .timeline-desc {
-    font-size: .85rem;
-    color: #4a525c;
-    line-height: 1.65;
-    padding-left: 16px;
-  }
-  .timeline-desc li { margin-bottom: 3px; }
+content:"";
 
-  /* GRID CARDS */
-  .grid-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--accent);
-    border-radius: 6px;
-    padding: 14px 16px;
-    box-shadow: 0 1px 3px rgba(20,30,45,0.05);
-  }
-  .card-title {
-    font-weight: 700;
-    font-size: .88rem;
-    color: var(--text-dark);
-    margin-bottom: 4px;
-    line-height: 1.35;
-  }
-  .card-org {
-    font-size: .8rem;
-    color: var(--accent);
-    margin-bottom: 3px;
-  }
-  .card-date {
-    font-size: .76rem;
-    color: var(--text-muted);
-  }
+position:fixed;
 
-  @media (max-width: 860px) {
-    .container { flex-direction: column; }
-    .sidebar { width: 100%; }
-    .grid-cards { grid-template-columns: 1fr; }
-    .main { padding: 26px 20px; }
-  }
-  @media print {
-    .print-btn { display: none; }
-    body { background: white; }
-  }
+bottom:-300px;
+right:-300px;
+
+width:700px;
+height:700px;
+
+background:#7c3aed33;
+
+filter:blur(170px);
+
+border-radius:50%;
+
+z-index:-2;
+
+}
+
+/*======================*/
+
+nav{
+
+position:fixed;
+
+width:100%;
+
+padding:18px 9%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(8,12,25,.55);
+
+backdrop-filter:blur(16px);
+
+z-index:999;
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+color:#60a5fa;
+
+}
+
+nav ul{
+
+display:flex;
+
+gap:35px;
+
+list-style:none;
+
+}
+
+nav ul li a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:500;
+
+transition:.35s;
+
+}
+
+nav ul li a:hover{
+
+color:#60a5fa;
+
+}
+
+/*======================*/
+
+.hero{
+
+min-height:100vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:120px 9%;
+
+gap:70px;
+
+flex-wrap:wrap;
+
+}
+
+.left{
+
+flex:1;
+
+min-width:320px;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:8px 18px;
+
+background:#1d4ed8;
+
+border-radius:30px;
+
+margin-bottom:25px;
+
+font-size:14px;
+
+}
+
+.left h1{
+
+font-size:68px;
+
+line-height:1.1;
+
+margin-bottom:20px;
+
+}
+
+.left h1 span{
+
+color:#60a5fa;
+
+}
+
+.left p{
+
+font-size:18px;
+
+line-height:1.9;
+
+color:#d4d7df;
+
+max-width:680px;
+
+}
+
+.buttons{
+
+margin-top:40px;
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.btn{
+
+padding:15px 32px;
+
+border-radius:40px;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+.btn-primary{
+
+background:#2563eb;
+
+color:white;
+
+}
+
+.btn-primary:hover{
+
+transform:translateY(-5px);
+
+}
+
+.btn-outline{
+
+border:2px solid #2563eb;
+
+color:white;
+
+}
+
+.btn-outline:hover{
+
+background:#2563eb;
+
+}
+
+.right{
+
+flex:1;
+
+display:flex;
+
+justify-content:center;
+
+min-width:300px;
+
+}
+
+.right img{
+
+width:360px;
+
+height:360px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid #3b82f6;
+
+box-shadow:0 0 50px #2563eb66;
+
+animation:float 4s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/*======================*/
+
+.stats{
+
+padding:20px 9% 90px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+.box{
+
+background:rgba(255,255,255,.05);
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+
+padding:35px;
+
+border-radius:22px;
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.box:hover{
+
+transform:translateY(-8px);
+
+}
+
+.box h2{
+
+font-size:42px;
+
+color:#60a5fa;
+
+margin-bottom:8px;
+
+}
+
+.box p{
+
+color:#cfd4dd;
+
+}
+
+/*======================*/
+
+section{
+
+padding:100px 9%;
+
+}
+
+.title{
+
+font-size:42px;
+
+margin-bottom:60px;
+
+text-align:center;
+
+}
+
+.title span{
+
+color:#60a5fa;
+
+}
+
+.about{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.about-card{
+
+background:rgba(255,255,255,.04);
+
+padding:40px;
+
+border-radius:25px;
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+.about-card p{
+
+line-height:2;
+
+color:#d4d7df;
+
+font-size:17px;
+
+}
+
+.skills{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+
+margin-top:50px;
+
+}
+
+.skill{
+
+padding:22px;
+
+background:#111827;
+
+border-radius:18px;
+
+text-align:center;
+
+font-weight:600;
+
+font-size:19px;
+
+transition:.35s;
+
+border:1px solid rgba(255,255,255,.06);
+
+}
+
+.skill:hover{
+
+background:#2563eb;
+
+transform:scale(1.05);
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+justify-content:center;
+
+text-align:center;
+
+}
+
+.left h1{
+
+font-size:48px;
+
+}
+
+.about{
+
+grid-template-columns:1fr;
+
+}
+
+nav ul{
+
+display:none;
+
+}
+
+.right img{
+
+width:260px;
+
+height:260px;
+
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
 
-<button class="print-btn" onclick="window.print()">⬇ Descargar / Imprimir CV en PDF</button>
+<nav>
 
-<div class="container">
-
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-
-    <div class="photo-wrap">
-      <img class="photo"
-           src="foto.jpg"
-           alt="Luis Beltrán Paredes Encinas"
-           onerror="this.src='https://ui-avatars.com/api/?name=Luis+Beltran&background=4a8fc2&color=fff&size=148&bold=true&rounded=true'">
-    </div>
-
-    <h1 class="name">Luis Beltrán<br>Paredes Encinas</h1>
-    <div class="role">Estudiante de Ingeniería<br>Estadística e Informática</div>
-
-    <h3>Contacto</h3>
-    <div class="contact-item"><span class="icon">📞</span> 927 621 010</div>
-    <div class="contact-item"><span class="icon">✉️</span> paredesencinasluisbeltran@gmail.com</div>
-    <div class="contact-item"><span class="icon">🎓</span> Universidad Nacional del Altiplano – Puno</div>
-    <div class="contact-item"><span class="icon">📋</span> Código: 236189</div>
-
-    <h3>Habilidades</h3>
-    <div class="skill">
-      <div class="skill-label"><span>R</span><span>90%</span></div>
-      <div class="skill-bar"><div class="skill-bar-fill" style="width:90%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label"><span>EViews</span><span>85%</span></div>
-      <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label"><span>MS Office</span><span>85%</span></div>
-      <div class="skill-bar"><div class="skill-bar-fill" style="width:85%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label"><span>Minitab</span><span>80%</span></div>
-      <div class="skill-bar"><div class="skill-bar-fill" style="width:80%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label"><span>SPSS</span><span>75%</span></div>
-      <div class="skill-bar"><div class="skill-bar-fill" style="width:75%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label"><span>Python</span><span>70%</span></div>
-      <div class="skill-bar"><div class="skill-bar-fill" style="width:70%"></div></div>
-    </div>
-    <div class="skill">
-      <div class="skill-label"><span>C++</span><span>65%</span></div>
-      <div class="skill-bar"><div class="skill-bar-fill" style="width:65%"></div></div>
-    </div>
-
-    <h3>Idiomas</h3>
-    <div class="lang-item"><span class="lang-dot"></span>Español — Nativo</div>
-    <div class="lang-item"><span class="lang-dot"></span>Aimara — Nativo</div>
-    <div class="lang-item"><span class="lang-dot" style="background:#4a5a6a"></span>Inglés — Básico</div>
-
-    <h3>Info Adicional</h3>
-    <ul class="info-list">
-      <li>Disponibilidad inmediata</li>
-      <li>Estudiante de 6to semestre</li>
-      <li>Enfoque en análisis estadístico y series de tiempo</li>
-      <li>Interés en ciencia de datos y machine learning</li>
-    </ul>
-
-  </aside>
-
-  <!-- MAIN CONTENT -->
-  <main class="main">
-
-    <div class="main-header">
-      <h1>Luis Beltrán Paredes Encinas</h1>
-      <p>Estudiante de Ingeniería Estadística e Informática — FINESI, UNA Puno</p>
-    </div>
-
-    <section class="section">
-      <h2 class="section-title">Perfil Profesional</h2>
-      <p class="profile-text">
-        Estudiante del VI Semestre de Ingeniería Estadística e Informática en la Universidad
-        Nacional del Altiplano (FINESI – Puno), con formación sólida en modelos estadísticos,
-        análisis de regresión y series de tiempo. Experiencia práctica en modelado econométrico
-        utilizando R, EViews y Minitab, incluyendo el desarrollo de un proyecto de tesis con
-        modelos SARIMA aplicado a datos reales de criminalidad. Maneja herramientas de
-        programación como Python y C++ para análisis de datos y desarrollo de algoritmos.
-        Proactivo, analítico y con interés en la ciencia de datos, el aprendizaje automático y
-        la investigación aplicada a problemas sociales y económicos de la región.
-      </p>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Experiencia / Proyectos</h2>
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-date">2025 – 2026</div>
-          <div class="timeline-title">Tesis: Modelado SARIMA de la criminalidad en la región Puno</div>
-          <div class="timeline-org">Trabajo de investigación – FINESI, UNA Puno</div>
-          <ul class="timeline-desc">
-            <li>Modelado de series de tiempo mensuales (2020–2026) usando SARIMA(1,1,1)(1,1,1)₁₂.</li>
-            <li>Incorporación de variable de intervención (dummy COVID-19) en el modelo.</li>
-            <li>Elaboración de pronósticos y validación con metodología Box-Jenkins.</li>
-            <li>Documentación completa en R, con redacción de tesis de 7 capítulos.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2026</div>
-          <div class="timeline-title">Comparación de modelos ARCH/GARCH para series de criminalidad</div>
-          <div class="timeline-org">Proyecto de econometría – EViews</div>
-          <ul class="timeline-desc">
-            <li>Modelado de volatilidad con ARCH(1) y GARCH(1,1) sobre series de criminalidad.</li>
-            <li>Selección de modelos mediante criterios de información AIC y BIC.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2025</div>
-          <div class="timeline-title">Análisis de Regresión Lineal y No Lineal</div>
-          <div class="timeline-org">Curso de Regresión – FINESI</div>
-          <ul class="timeline-desc">
-            <li>Estimación por Mínimos Cuadrados Ordinarios (MCO), pruebas t y tablas ANOVA.</li>
-            <li>Construcción de intervalos de confianza y bandas de Working-Hotelling.</li>
-            <li>Elaboración de reportes técnicos en Excel y documentos en LaTeX.</li>
-          </ul>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">2025</div>
-          <div class="timeline-title">Análisis de algoritmos de Clustering (K-Means, PCA)</div>
-          <div class="timeline-org">Curso de Aprendizaje No Supervisado – FINESI</div>
-          <ul class="timeline-desc">
-            <li>Implementación de notebooks en Python para clustering y análisis de silueta.</li>
-            <li>Reducción de dimensionalidad con PCA y evaluación de calidad de agrupamiento.</li>
-          </ul>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Formación Académica</h2>
-      <div class="grid-cards">
-        <div class="card">
-          <p class="card-title">Ingeniería Estadística e Informática — VI Sem. (en curso)</p>
-          <p class="card-org">Universidad Nacional del Altiplano – FINESI, Puno</p>
-          <p class="card-date">2023 – Actualidad</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2 class="section-title">Cursos y Áreas de Formación</h2>
-      <div class="grid-cards">
-        <div class="card">
-          <p class="card-title">Modelos Lineales</p>
-          <p class="card-org">FINESI – UNA Puno</p>
-        </div>
-        <div class="card">
-          <p class="card-title">Regresión Lineal y No Lineal</p>
-          <p class="card-org">FINESI – UNA Puno</p>
-        </div>
-        <div class="card">
-          <p class="card-title">Arquitectura y Protocolos de Redes</p>
-          <p class="card-org">FINESI – UNA Puno</p>
-        </div>
-        <div class="card">
-          <p class="card-title">Aprendizaje No Supervisado</p>
-          <p class="card-org">FINESI – UNA Puno</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
+<div class="logo">
+Luis Beltrán
 </div>
 
+<ul>
+
+<li><a href="#inicio">Inicio</a></li>
+
+<li><a href="#sobre">Sobre mí</a></li>
+
+<li><a href="#habilidades">Habilidades</a></li>
+
+<li><a href="#proyectos">Proyectos</a></li>
+
+<li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero" id="inicio">
+
+<div class="left">
+
+<div class="badge">
+🚀 Portafolio Profesional
+</div>
+
+<h1>
+
+Luis Beltrán
+
+<span>
+
+Paredes Encinas
+
+</span>
+
+</h1>
+
+<p>
+
+Estudiante de Ingeniería Estadística e Informática apasionado por la Ciencia de Datos,
+Inteligencia Artificial, Econometría, Machine Learning y Desarrollo de Software.
+Mi objetivo es transformar datos en soluciones útiles mediante modelos estadísticos
+y programación con Python, R y C++.
+
+</p>
+
+<div class="buttons">
+
+<a class="btn btn-primary" href="#proyectos">
+
+Ver proyectos
+
+</a>
+
+<a class="btn btn-outline" href="cv.pdf">
+
+Descargar CV
+
+</a>
+
+</div>
+
+</div>
+
+<div class="right">
+
+<img src="foto.jpg"
+onerror="this.src='https://ui-avatars.com/api/?name=Luis+Beltran+Paredes&background=2563eb&color=ffffff&size=512';">
+
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="box">
+
+<h2>5+</h2>
+
+<p>Proyectos desarrollados</p>
+
+</div>
+
+<div class="box">
+
+<h2>Python</h2>
+
+<p>Análisis y automatización</p>
+
+</div>
+
+<div class="box">
+
+<h2>SARIMA</h2>
+
+<p>Pronóstico de series de tiempo</p>
+
+</div>
+
+<div class="box">
+
+<h2>IA</h2>
+
+<p>Machine Learning y Estadística</p>
+
+</div>
+
+</section>
+
+<section id="sobre">
+
+<h2 class="title">
+
+Sobre <span>mí</span>
+
+</h2>
+
+<div class="about">
+
+<div class="about-card">
+
+<p>
+
+Soy estudiante de Ingeniería Estadística e Informática con interés en análisis de datos,
+modelado predictivo y desarrollo de soluciones tecnológicas. He trabajado en proyectos
+de investigación utilizando modelos SARIMA, ARCH/GARCH, regresión lineal, clustering y
+otras técnicas estadísticas para abordar problemas reales.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<p>
+
+Tengo experiencia utilizando Python, R, C++, EViews, SPSS y Minitab para análisis
+estadístico, series de tiempo y aprendizaje automático. Busco seguir fortaleciendo
+mis conocimientos en ciencia de datos e inteligencia artificial aplicada.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="habilidades">
+
+<h2 class="title">
+
+Mis <span>Habilidades</span>
+
+</h2>
+
+<div class="skills">
+
+<div class="skill">🐍 Python</div>
+
+<div class="skill">📊 R</div>
+
+<div class="skill">💻 C++</div>
+
+<div class="skill">📈 EViews</div>
+
+<div class="skill">📉 SPSS</div>
+
+<div class="skill">📚 Minitab</div>
+
+<div class="skill">🤖 Machine Learning</div>
+
+<div class="skill">📅 Series de Tiempo</div>
+
+<div class="skill">🧠 Inteligencia Artificial</div>
+
+<div class="skill">📐 Econometría</div>
+
+<div class="skill">🌐 HTML / CSS</div>
+
+<div class="skill">⚡ JavaScript</div>
+
+</div>
+
+</section>
+<!-- ================= PROYECTOS ================= -->
+
+<section id="proyectos">
+
+<h2 class="title">
+
+Mis <span>Proyectos</span>
+
+</h2>
+
+<div class="skills">
+
+<div class="about-card">
+
+<h3 style="font-size:26px;margin-bottom:15px;color:#60a5fa;">
+📈 Predicción de Criminalidad con SARIMA
+</h3>
+
+<p>
+Desarrollo de un modelo SARIMA para analizar y pronosticar la evolución de la
+criminalidad utilizando la metodología Box-Jenkins, incorporando variables de
+intervención y validación estadística.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3 style="font-size:26px;margin-bottom:15px;color:#60a5fa;">
+📊 Modelos ARCH / GARCH
+</h3>
+
+<p>
+Comparación de modelos de volatilidad para estudiar la variabilidad de series
+temporales mediante criterios AIC, BIC y diagnóstico de residuos.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3 style="font-size:26px;margin-bottom:15px;color:#60a5fa;">
+💻 Regresión Lineal en C++
+</h3>
+
+<p>
+Implementación desde cero del método matricial para regresión lineal, cálculo
+de parámetros, coeficiente de determinación y generación automática de gráficos.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3 style="font-size:26px;margin-bottom:15px;color:#60a5fa;">
+🤖 Clustering y PCA
+</h3>
+
+<p>
+Aplicación de algoritmos K-Means y Análisis de Componentes Principales para
+segmentación de datos y reducción de dimensionalidad en Python.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3 style="font-size:26px;margin-bottom:15px;color:#60a5fa;">
+📚 Modelos Lineales Mixtos
+</h3>
+
+<p>
+Investigación sobre durabilidad de machones en infraestructuras civiles mediante
+modelos lineales mixtos e interpretación de resultados estadísticos.
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3 style="font-size:26px;margin-bottom:15px;color:#60a5fa;">
+🐍 Aplicaciones en Python
+</h3>
+
+<p>
+Desarrollo de herramientas interactivas para estadística, simulaciones y análisis
+de datos utilizando interfaces gráficas y visualizaciones dinámicas.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= EDUCACIÓN ================= -->
+
+<section id="educacion">
+
+<h2 class="title">
+
+Formación <span>Académica</span>
+
+</h2>
+
+<div class="about">
+
+<div class="about-card">
+
+<h3 style="color:#60a5fa;margin-bottom:15px;">
+🎓 Ingeniería Estadística e Informática
+</h3>
+
+<p>
+
+Universidad Nacional del Altiplano – Puno
+
+<br><br>
+
+Formación enfocada en estadística aplicada, ciencia de datos,
+aprendizaje automático, inteligencia artificial, econometría,
+series de tiempo y desarrollo de software.
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3 style="color:#60a5fa;margin-bottom:15px;">
+📖 Áreas de especialización
+</h3>
+
+<p>
+
+• Ciencia de Datos
+
+<br>
+
+• Machine Learning
+
+<br>
+
+• Econometría
+
+<br>
+
+• Series de Tiempo
+
+<br>
+
+• Modelos SARIMA
+
+<br>
+
+• Modelos ARCH/GARCH
+
+<br>
+
+• Programación Científica
+
+<br>
+
+• Inteligencia Artificial
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACTO ================= -->
+
+<section id="contacto">
+
+<h2 class="title">
+
+Contácta<span>me</span>
+
+</h2>
+
+<div class="about">
+
+<div class="about-card">
+
+<h3 style="margin-bottom:20px;color:#60a5fa;">
+
+📧 Información
+
+</h3>
+
+<p>
+
+<strong>Nombre:</strong>
+
+Luis Beltrán Paredes Encinas
+
+<br><br>
+
+<strong>Email:</strong>
+
+paredesencinasluisbeltran@gmail.com
+
+<br><br>
+
+<strong>Teléfono:</strong>
+
+927 621 010
+
+<br><br>
+
+<strong>Universidad:</strong>
+
+Universidad Nacional del Altiplano
+
+</p>
+
+</div>
+
+<div class="about-card">
+
+<h3 style="margin-bottom:20px;color:#60a5fa;">
+
+🚀 Objetivo Profesional
+
+</h3>
+
+<p>
+
+Busco participar en proyectos relacionados con Ciencia de Datos,
+Inteligencia Artificial, análisis estadístico, desarrollo de software
+y modelado predictivo, aportando soluciones innovadoras basadas
+en evidencia y programación.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer
+style="padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,.08);color:#cfd4dd;">
+
+© 2026 Luis Beltrán Paredes Encinas
+
+<br><br>
+
+Diseñado con HTML, CSS y JavaScript.
+
+</footer>
+
+<script>
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>40){
+
+nav.style.background="rgba(5,8,20,.92)";
+
+}else{
+
+nav.style.background="rgba(8,12,25,.55)";
+
+}
+
+});
+
+</script>
+
 </body>
+
 </html>
